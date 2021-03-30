@@ -1,0 +1,21 @@
+/*
+Chessboard
+Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
+*/
+
+function chess(width, height) {
+  let string = '';
+  for (let length = 1; length <= width; length++) {
+    for (var row = 1; row <= height; row++) {
+        if ((row+length) % 2 === 0) {
+          string += ' ';
+        } else {
+          string += '#';
+        }
+    }
+    string += "\n"
+  }
+  return string;
+}
+
+console.log(chess(8, 8));
